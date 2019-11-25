@@ -1,0 +1,6 @@
+config/*
+!config/.keep
+!config/example
+bin
+
+a.out

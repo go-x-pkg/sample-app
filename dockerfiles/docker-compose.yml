@@ -1,0 +1,27 @@
+version: "3.6"
+
+services:
+  server-build:
+    build:
+      dockerfile: ./dockerfiles/app/Dockerfile
+      context: ..
+      target: server-build
+    hostname: sample-app-server-build
+    container_name: sample-app-server-build
+
+  server-run:
+    build:
+      dockerfile: ./dockerfiles/app/Dockerfile
+      context: ..
+      target: server-run
+    networks:
+      - sample-app
+    hostname: sample-app-server
+    container_name: sample-app-server
+    volumes:
+      - ./server/etc/sample-app-server/:/etc/sample-app-server/
+    command: [""]
+
+networks:
+  sample-app:
+    name: sample-app

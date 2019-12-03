@@ -8,8 +8,11 @@ import (
 	"os/signal"
 	"sync"
 	"syscall"
+	"time"
 
 	"github.com/go-x-pkg/log"
+	"github.com/go-x-pkg/memstats"
+	"github.com/go-x-pkg/servers"
 	daemon "github.com/sevlyar/go-daemon"
 	"github.com/spf13/pflag"
 )
@@ -124,7 +127,22 @@ func (a *App) run() (outErr error) {
 	go func() {
 		defer wg.Done()
 
-		// start some worker here
+		worker := memstats.Worker{}
+		worker.Initialize(
+			memstats.FnLog(func(lvl log.Level, msg string) {
+				log.Log(a.ctx.loggers().ByName("memstats"), lvl, msg)
+			}),
+			memstats.FnPeriod(func() time.Duration {
+				return a.ctx.cfg().Period.Memstats
+			}),
+		)
+
+		go worker.StartWithCtx(ctx)
+		<-ctx.Done()
+
+		ctxTimeout, cancel := context.WithTimeout(context.Background(), timeoutWorkersDone)
+		defer cancel()
+		worker.DoneWithContext(ctxTimeout)
 	}()
 
 	logFn(log.Info,
@@ -137,7 +155,28 @@ func (a *App) run() (outErr error) {
 
 	wg.Add(1)
 	go func() {
-		// start some HTTP servers here
+		done, errs := a.ctx.cfg().Servers.ListenAndServe(
+			a.HTTPHandler(),
+			servers.Context(ctx),
+			servers.FnLog(func(lvl log.Level, msg string, a ...interface{}) {
+				logFn(lvl, msg, a...)
+			}),
+			servers.FnShutdownTimeout(func() time.Duration {
+				return a.ctx.cfg().Timeout.WorkersDone
+			}),
+		)
+
+		defer wg.Done()
+
+		select {
+		case <-done:
+			return
+		case err := <-errs:
+			logFn(log.Critical, err.Error())
+
+			close(serverErrChan)
+			outErr = err
+		}
 	}()
 
 	wg.Wait()

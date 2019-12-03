@@ -6,7 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/go-x-pkg/app/appversion"
+	"github.com/go-x-pkg/sample-app/appversion"
 	"github.com/go-x-pkg/sample-app/internal/server"
 )
 

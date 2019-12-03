@@ -27,14 +27,14 @@ RUN go mod download
 COPY ./cmd/ ./cmd
 COPY ./internal/ ./internal/
 COPY ./pkg/ ./pkg/
-COPY ./app-version/ ./app-version/
+COPY ./appversion/ ./appversion/
 
-COPY ./hack/build-server.sh ./hack/build-server.sh
+COPY ./hack/build-sample-app-server.sh ./hack/build-sample-app-server.sh
 
 # -----------------------------------------------------------------------------
 FROM base as server-build
 
-RUN /bin/bash ./hack/build-server.sh
+RUN /bin/bash ./hack/build-sample-app-server.sh
 RUN cp /usr/local/sample-app/bin/sample-app-server /usr/local/bin/sample-app-server
 
 # -----------------------------------------------------------------------------

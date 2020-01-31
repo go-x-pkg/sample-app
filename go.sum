@@ -34,6 +34,8 @@ github.com/go-x-pkg/servers v0.0.1 h1:miB+7XXUwmHJCBTVBu+KDk0AA+2UMzdhwbxZc2Fnx7
 github.com/go-x-pkg/servers v0.0.1/go.mod h1:Vuo1MFcYdLhdF0Jr8U1i2j6YT2+C4Yt49iY6xfZsi/4=
 github.com/go-x-pkg/xseelog v0.0.2 h1:Rk49WvXlNOsKTQUa0XTe9UpVnSfAF3rKQ4CLGZhLNaA=
 github.com/go-x-pkg/xseelog v0.0.2/go.mod h1:25r4+NUYdjBc1Q5QqpZzH6RGDrWgadwbq+SALD71DsU=
+github.com/go-x-pkg/xseelog v0.0.3 h1:QWXcLSXGXo8l95bViDp1DBsBeFGfJDpuOYb9zodB2og=
+github.com/go-x-pkg/xseelog v0.0.3/go.mod h1:25r4+NUYdjBc1Q5QqpZzH6RGDrWgadwbq+SALD71DsU=
 github.com/golang/protobuf v1.3.2 h1:6nsPYzhq5kReh6QImI3k5qWzO4PEbvbIW2cwSfR/6xs=
 github.com/golang/protobuf v1.3.2/go.mod h1:6lQm79b+lXiMfvg/cZm0SGofjICqVBUtrP5yJMmIC1U=
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=

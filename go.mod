@@ -6,7 +6,7 @@ require (
 	github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-x-pkg/bufpool v0.0.1
-	github.com/go-x-pkg/dumpctx v0.0.1
+	github.com/go-x-pkg/dumpctx v0.0.2
 	github.com/go-x-pkg/fnscli v0.0.1
 	github.com/go-x-pkg/log v0.0.3
 	github.com/go-x-pkg/memstats v0.0.4

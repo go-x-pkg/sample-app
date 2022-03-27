@@ -8,9 +8,9 @@ require (
 	github.com/go-x-pkg/bufpool v0.0.1
 	github.com/go-x-pkg/dumpctx v0.0.2
 	github.com/go-x-pkg/fnscli v0.0.1
-	github.com/go-x-pkg/log v0.0.5
+	github.com/go-x-pkg/log v0.0.6
 	github.com/go-x-pkg/memstats v0.0.4
-	github.com/go-x-pkg/servers v0.2.1
+	github.com/go-x-pkg/servers v0.3.0
 	github.com/go-x-pkg/xseelog v0.0.3
 	github.com/kardianos/osext v0.0.0-20190222173326-2bc1f35cddc0 // indirect
 	github.com/sevlyar/go-daemon v0.1.5

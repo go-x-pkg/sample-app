@@ -167,6 +167,8 @@ github.com/go-x-pkg/servers v0.2.1 h1:D9Y//2meqZ4X8NZY149TNxqbtRDvrgdlRUV/+zyPfI
 github.com/go-x-pkg/servers v0.2.1/go.mod h1:tyS5pAexIpL05S3kbsYLPrqi15uPsAwX6MpDc/aU5ig=
 github.com/go-x-pkg/servers v0.3.0 h1:VPMYmW7WfAbNXCB/LgKK4tRqulPigV0vSbNNyHz8tb0=
 github.com/go-x-pkg/servers v0.3.0/go.mod h1:zkrVCCiD3drE2RQj9rlp/JeaHgqAZlQNIXXHyjHxU/g=
+github.com/go-x-pkg/servers v0.3.2 h1:WmcvIuECteTy5tKBIzJyCMhldc4HFnIraxzM/zkXeRc=
+github.com/go-x-pkg/servers v0.3.2/go.mod h1:zkrVCCiD3drE2RQj9rlp/JeaHgqAZlQNIXXHyjHxU/g=
 github.com/go-x-pkg/xseelog v0.0.2 h1:Rk49WvXlNOsKTQUa0XTe9UpVnSfAF3rKQ4CLGZhLNaA=
 github.com/go-x-pkg/xseelog v0.0.2/go.mod h1:25r4+NUYdjBc1Q5QqpZzH6RGDrWgadwbq+SALD71DsU=
 github.com/go-x-pkg/xseelog v0.0.3 h1:QWXcLSXGXo8l95bViDp1DBsBeFGfJDpuOYb9zodB2og=

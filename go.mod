@@ -3,7 +3,7 @@ module github.com/go-x-pkg/sample-app
 go 1.19
 
 require (
-	github.com/cihub/seelog v0.0.0-20170130134532-f561c5e57575
+	github.com/cihub/seelog/v2 v2.6
 	github.com/gin-gonic/gin v1.8.2
 	github.com/go-x-pkg/bufpool v0.0.1
 	github.com/go-x-pkg/dumpctx v0.0.2

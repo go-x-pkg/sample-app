@@ -1,4 +1,4 @@
-FROM debian:11 as base
+FROM debian:bullseye-20260623 as base
 
 ENV GO_VERSION="1.13.4"
 
